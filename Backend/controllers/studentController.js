@@ -7,7 +7,7 @@ const registeredCourseSchema = require("../models/registeredCourseModel");
 
 const registerStudent = async (req, res) => {
   try {
-    const { fname, lname, email, password } = req.body;
+    const { fname, lname, email, password, regNumber } = req.body;
 
     // validation
     switch (true) {
@@ -46,23 +46,12 @@ const registerStudent = async (req, res) => {
       });
     }
 
-    let rollNumber;
-    while (true) {
-      // generating 4-digit roll number
-      const randomDecimal = Math.random();
-      rollNumber = Math.floor(randomDecimal * (9999 - 1000 + 1) + 1000);
-
-      // ensuring unique roll number
-      const rollNumberExists = await studentSchema.find({ rollNumber });
-      if (!rollNumberExists.length) break;
-    }
-
     // registration
     const newStudent = new studentSchema({
       fname,
       lname,
       email,
-      rollNumber,
+      regNumber,
       password,
     });
     const result = await newStudent.save();
@@ -141,11 +130,11 @@ const getSingleStudent = async (req, res) => {
 
 const loginStudent = async (req, res) => {
   try {
-    const { email, rollNumber, password } = req.body;
+    const { email, regNumber, password } = req.body;
 
     // validation
     switch (true) {
-      case !email && !rollNumber:
+      case !email && !regNumber:
         return res.status(400).send({
           success: false,
           message: "Please provide Email or Roll number.",
@@ -162,7 +151,7 @@ const loginStudent = async (req, res) => {
     const student = await studentSchema.findOne({
       $or: [
         { email, password },
-        { rollNumber, password },
+        { regNumber, password },
       ],
     });
 

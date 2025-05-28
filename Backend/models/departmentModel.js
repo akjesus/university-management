@@ -1,24 +1,21 @@
 const mongoose = require("mongoose");
 
-const studentSchema = new mongoose.Schema(
+const departmentSchema = new mongoose.Schema(
   {
-    fname: {
+    name: {
       type: String,
       trim: true,
       required: true,
     },
-    lname: {
+    code: {
       type: String,
       trim: true,
       required: true,
     },
-    email: {
+    faculty: {
       type: String,
+      ref: "faculties",
       required: true,
-    },
-    regNumber: {
-        type: Number,
-        required: true,
     },
     password: {
       type: String,
@@ -28,4 +25,4 @@ const studentSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("students", studentSchema);
+module.exports = mongoose.model("departments", departmentSchema);
