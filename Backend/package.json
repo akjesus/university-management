@@ -1,13 +1,13 @@
 {
-  "name": "student-management-portal",
+  "name": "university-management-system-backend",
   "version": "1.0.0",
-  "description": "5th semester project of SDA",
+  "description": "university-management-system-backend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon"
   },
-  "author": "Ahsan Javed",
+  "author": "Otong Akan",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
