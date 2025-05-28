@@ -1,5 +1,5 @@
-# university-management
-A full fledged university management dashboard built with MERN Stack
+# University Management Dashboard
+A full fledged University Management Dashboard built with MERN Stack
 
 
 
