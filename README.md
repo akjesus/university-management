@@ -21,7 +21,7 @@ University Management System is a sort of LMS where Admin can register instructo
 
 MERN Stack
 
-##Frontend
+## Frontend
 
 * React.js
 * Bootstrap 5
@@ -35,9 +35,18 @@ MERN Stack
 
 * MongoDB
 
-
-
 # Server: Node.js, Express.js and MongoDB
+
+## To get Started 
+
+* Clone the repo by typing 
+### `git clone https://github.com/akjesus/university-management.git`
+
+* Then Create a branch with any name by typing 
+### `git checkout -b "branch-name"`
+
+* After cloning, execute the following commands to get started 
+
 
 ## Available Scripts
 
