@@ -1,8 +1,10 @@
 const express = require("express");
-const {   getFaculties,
+const {
+  getFaculties,
   createFaculty,
   getDepartments,
-  createDepartment} = require("../controllers/schoolController");
+  createDepartment,
+} = require("../controllers/schoolController");
 
   const router = express.Router();
   

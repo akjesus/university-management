@@ -20,7 +20,7 @@ export default function LoginForm({
               if (toggle)
                 setLoginDetails({
                   ...loginDetails,
-                  rollNumber: null,
+                  regNumber: null,
                 });
               else
                 setLoginDetails({
@@ -32,15 +32,15 @@ export default function LoginForm({
           />
           {toggle ? (
             <>
-              <label className='form-label'>Roll Number</label>
+              <label className='form-label'>Matric Number</label>
               <input
                 className='form-control mb-4'
                 type='text'
-                value={loginDetails.rollNumber ?? ''}
+                value={loginDetails.regNumber ?? ''}
                 onChange={(event) =>
                   setLoginDetails({
                     ...loginDetails,
-                    rollNumber: event.target.value,
+                    regNumber: event.target.value,
                   })
                 }
                 required

@@ -17,10 +17,6 @@ const departmentSchema = new mongoose.Schema(
       ref: "faculties",
       required: true,
     },
-    password: {
-      type: String,
-      required: true,
-    },
   },
   { timestamps: true }
 );

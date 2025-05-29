@@ -17,8 +17,9 @@ const studentSchema = new mongoose.Schema(
       required: true,
     },
     regNumber: {
-        type: Number,
+        type: String,
         required: true,
+        unique: true,
     },
     password: {
       type: String,

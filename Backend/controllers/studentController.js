@@ -1,5 +1,5 @@
 const studentSchema = require("../models/studentModel");
-const instructorSchema = require("../models/instructorModel");
+const instructorSchema = require("../models/staffModel");
 const courseSchema = require("../models/courseModel");
 const academicSchema = require("../models/academicModel");
 const attendanceSchema = require("../models/attendanceModel");
@@ -131,6 +131,7 @@ const getSingleStudent = async (req, res) => {
 const loginStudent = async (req, res) => {
   try {
     const { email, regNumber, password } = req.body;
+
 
     // validation
     switch (true) {
