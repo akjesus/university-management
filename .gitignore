@@ -5,15 +5,15 @@
 /Backend/.env
 
 # dependencies
-/Frontend/node_modules
-/Frontend/.pnp
+/frontend/node_modules
+/frontend/.pnp
 .pnp.js
 
 # testing
-/Frontend/coverage
+/frontend/coverage
 
 # production
-/Frontend/build
+/frontend/build
 
 # misc
 .DS_Store
