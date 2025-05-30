@@ -15,6 +15,8 @@ export default function StudentSignup() {
     fname: '',
     lname: '',
     email: '',
+    regNumber: '',
+    department: '',
     password: '',
   });
   const [isLoading, setIsLoading] = useState(false);

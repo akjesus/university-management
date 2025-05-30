@@ -15,8 +15,8 @@ export default function Student() {
             value: studentData.fname,
           },
           {
-            title: "Roll Number",
-            value: studentData.rollNumber,
+            title: "Matric Number",
+            value: studentData.regNumber,
           },
           {
             title: "Email Address",

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const instructorSchema = new mongoose.Schema(
+const staffSchema = new mongoose.Schema(
   {
     fname: {
       type: String,
@@ -16,6 +16,10 @@ const instructorSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    qualifications: {
+      type: Array,
+      default: [],
+    },
     password: {
       type: String,
       required: true,
@@ -24,4 +28,4 @@ const instructorSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("instructors", instructorSchema);
+module.exports = mongoose.model("staff", staffSchema);

@@ -3,8 +3,9 @@ const app = express();
 const cors = require("cors");
 const adminRoute = require("./routes/adminRoute");
 const courseRoute = require("./routes/courseRoute");
-const instructorRoute = require("./routes/instructorRoute");
+const instructorRoute = require("./routes/staffRoute");
 const studentRoute = require("./routes/studentRoute");
+const schoolRoute = require("./routes/schoolRoute");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 
@@ -20,6 +21,7 @@ app.use("/v1/api/admin", adminRoute);
 app.use("/v1/api/course", courseRoute);
 app.use("/v1/api/instructor", instructorRoute);
 app.use("/v1/api/student", studentRoute);
+app.use("/v1/api/school", schoolRoute);
 
 // server status
 app.get("/v1/api/", (req, res) => {

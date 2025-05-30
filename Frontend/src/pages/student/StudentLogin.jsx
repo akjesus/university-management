@@ -16,7 +16,7 @@ export default function StudentLogin() {
 
   const [loginDetails, setLoginDetails] = useState({
     email: '',
-    rollNumber: null,
+    regNumber: null,
     password: '',
   });
   const [isLoading, setIsLoading] = useState(false);

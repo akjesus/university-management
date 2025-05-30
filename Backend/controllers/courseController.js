@@ -1,5 +1,5 @@
 const courseSchema = require('../models/courseModel');
-const instructorSchema = require('../models/instructorModel');
+const instructorSchema = require("../models/staffModel");
 const studentSchema = require('../models/studentModel');
 const offeredCourseSchema = require('../models/offeredCourseModel');
 const registeredCourseSchema = require('../models/registeredCourseModel');

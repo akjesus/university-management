@@ -1,24 +1,18 @@
 const mongoose = require("mongoose");
 
-const courseSchema = new mongoose.Schema(
+const departmentSchema = new mongoose.Schema(
   {
-    title: {
+    name: {
       type: String,
       trim: true,
       required: true,
     },
-    creditHours: {
-      type: Number,
-    },
-    type: {
-      type: String,
-      required: true,
-    },
     code: {
       type: String,
+      trim: true,
       required: true,
     },
-    adminId: {
+    faculty: {
       type: String,
       ref: "faculties",
       required: true,
@@ -27,4 +21,4 @@ const courseSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("courses", courseSchema);
+module.exports = mongoose.model("departments", departmentSchema);

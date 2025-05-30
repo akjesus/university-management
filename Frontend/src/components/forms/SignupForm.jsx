@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 export default function SignupForm({
   signupDetails,
   setSignupDetails,
@@ -7,6 +9,7 @@ export default function SignupForm({
   update
 }) {
   console.log(signupDetails)
+  
   return (
     <form onSubmit={(event) => signup(event)}>
       <div className="row">
@@ -41,6 +44,38 @@ export default function SignupForm({
           />
         </div>
       </div>
+      <div className="row">
+        <div className="col">
+          <label className="form-label">Matric Number</label>
+          <input
+            className="form-control mb-4"
+            type="text"
+            value={signupDetails.regNumber}
+            onChange={(event) =>
+              setSignupDetails({
+                ...signupDetails,
+                regNumber: event.target.value,
+              })
+            }
+            required
+          />
+        </div>
+        <div className="col">
+          <label className="form-label">Department</label>
+          <input
+            className="form-control mb-4"
+            type="text"
+            value={signupDetails.department}
+            onChange={(event) =>
+              setSignupDetails({
+                ...signupDetails,
+                department: event.target.value,
+              })
+            }
+            required
+          />
+        </div>
+      </div>
       <label className="form-label">Email</label>
       <input
         className="form-control mb-4"
@@ -65,7 +100,9 @@ export default function SignupForm({
         required
       />
       <div className="d-flex justify-content-center">
-        <button className="btn btn-secondary">{update ? "Update" : "Register"}</button>
+        <button className="btn btn-secondary">
+          {update ? "Update" : "Register"}
+        </button>
       </div>
     </form>
   );
